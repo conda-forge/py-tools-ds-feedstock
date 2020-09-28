@@ -12,14 +12,15 @@ source:
   sha256: 08f0ea242203143b6c81bf9ca13627ea44a663a5d3e4eb65fc3cfb789f53d06c
 
 build:
-  number: 0
-  noarch: python
+  number: 1
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - gdal >=2.1.0
     - geopandas
@@ -36,16 +37,18 @@ test:
   imports:
     - py_tools_ds
     - py_tools_ds.compatibility
+    - py_tools_ds.geo
+    - py_tools_ds.geo.raster.reproject
 
 about:
   home: https://pypi.org/project/py-tools-ds/
   summary: A collection of Python tools by Daniel Scheffler.
-  license: Unlicense
+  license: GPL-3.0-or-later
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
+    - danschef
     - rluria14
     - ndmaxar
     - RyanHackney
-    - danschef
