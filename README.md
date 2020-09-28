@@ -3,7 +3,7 @@ About py-tools-ds
 
 Home: https://pypi.org/project/py-tools-ds/
 
-Package license: Unlicense
+Package license: GPL-3.0-or-later
 
 Feedstock license: BSD-3-Clause
 
