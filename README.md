@@ -5,11 +5,9 @@ Home: https://pypi.org/project/py-tools-ds/
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-tools-ds-feedstock/blob/master/LICENSE.txt)
 
 Summary: A collection of Python tools by Daniel Scheffler.
-
-
 
 Current build status
 ====================
