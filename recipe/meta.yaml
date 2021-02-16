@@ -25,6 +25,7 @@ requirements:
     - gdal >=2.1.0
     - geopandas
     - numpy
+    - packaging
     - pandas
     - pyproj >=2.2.0
     - python
