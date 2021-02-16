@@ -1,6 +1,6 @@
 {% set name = "py-tools-ds" %}
 {% set url_name = "py_tools_ds" %}
-{% set version = "0.16.7" %}
+{% set version = "0.16.8" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ url_name }}-{{ version }}.tar.gz
-  sha256: 6cced0355009321792ef6ca27147e76e5c06460eb95ada8140101a73a18bd049
+  sha256: e538ed1c2891c0c675c275ea1cca167589f4ff2dc76e37748fc24253590d4f23
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - gdal >=2.1.0
     - geopandas
     - numpy
+    - packaging
     - pandas
     - pyproj >=2.2.0
     - python
