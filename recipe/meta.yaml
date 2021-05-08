@@ -25,19 +25,16 @@ requirements:
     - gdal >=2.1.0
     - geopandas
     - numpy
-    - packaging
     - pandas
-    - pyproj >=2.2.0
+    - pyproj >=2.5.0
     - python
-    - scikit-image >=0.16.0
     - shapely
-    - six
     - spectral
 
 test:
   imports:
     - py_tools_ds
-    - py_tools_ds.compatibility
+    - py_tools_ds.io
     - py_tools_ds.geo
     - py_tools_ds.geo.raster.reproject
 
