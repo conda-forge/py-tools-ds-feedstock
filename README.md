@@ -3,7 +3,7 @@ About py-tools-ds
 
 Home: https://pypi.org/project/py-tools-ds/
 
-Package license: GPL-3.0-or-later
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-tools-ds-feedstock/blob/master/LICENSE.txt)
 
