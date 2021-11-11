@@ -23,7 +23,6 @@ requirements:
     - setuptools
   run:
     - gdal >=2.1.0
-    - geopandas
     - numpy
     - pandas
     - pyproj >=2.5.0
