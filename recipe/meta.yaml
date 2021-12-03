@@ -1,6 +1,6 @@
 {% set name = "py-tools-ds" %}
 {% set url_name = "py_tools_ds" %}
-{% set version = "0.20.0" %}
+{% set version = "0.20.1" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ url_name }}-{{ version }}.tar.gz
-  sha256: cf65f87ee64a404bf04fd216e17e1ed86a30b97b27cbc06d267a92e3bb74f95c
+  sha256: c745a3e540c2b75dbffc1783df4307707b0b9f80cc7f30de4f1138983f62d899
 
 build:
   number: 0
