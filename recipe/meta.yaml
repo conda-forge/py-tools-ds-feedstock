@@ -25,7 +25,7 @@ requirements:
     - python
     - setuptools
   run:
-    - gdal >=3.8
+    - gdal >=3.8,<3.11
     - numpy
     - pandas
     - pyproj >=2.5.0
