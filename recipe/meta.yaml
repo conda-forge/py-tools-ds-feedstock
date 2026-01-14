@@ -1,6 +1,6 @@
 {% set name = "py-tools-ds" %}
 {% set url_name = "py_tools_ds" %}
-{% set version = "0.23.3" %}
+{% set version = "0.24.0" %}
 
 
 package:
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ url_name }}-{{ version }}.tar.gz
-  sha256: aaa4c81649f3435979c3270819ceaba7bebc6bc334c816fae30a106b47925a78
+  sha256: 68b7a4fb46312185b78de64c27a0022204e22667c8c5565105cfdd158f99ce68
 
 build:
   number: 0
-  skip: true  # [py<39]
+  skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
