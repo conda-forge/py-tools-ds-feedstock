@@ -27,6 +27,7 @@ requirements:
   run:
     - gdal >=3.8
     - numpy
+    - packaging
     - pandas
     - pyproj >=2.5.0
     - python
