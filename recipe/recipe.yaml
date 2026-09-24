@@ -1,0 +1,62 @@
+schema_version: 1
+
+context:
+  name: py-tools-ds
+  url_name: py_tools_ds
+  version: "0.24.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ url_name }}-${{ version }}.tar.gz
+  sha256: 8c611834f51e7c6de934789eed2d194d982c9b6c46954afbfdc3996d3830c6d0
+
+build:
+  number: 1
+  skip: match(python, "<3.11")
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+  host:
+    - pip
+    - python
+    - setuptools
+  run:
+    - gdal >=3.8
+    - numpy
+    - packaging
+    - pandas
+    - pyproj >=2.5.0
+    - python
+    - shapely
+    - spectral
+
+tests:
+  - python:
+      imports:
+        - py_tools_ds
+        - py_tools_ds.io
+        - py_tools_ds.geo
+        - py_tools_ds.geo.raster.reproject
+      pip_check: True
+
+about:
+  summary: A collection of Python tools by Daniel Scheffler.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://pypi.org/project/py-tools-ds/
+
+extra:
+  recipe-maintainers:
+    - mxr-conda
+    - danschef
+    - rluria14
+    - ndmaxar
+    - RyanHackney
