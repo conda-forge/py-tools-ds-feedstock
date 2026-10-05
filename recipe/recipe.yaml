@@ -14,16 +14,16 @@ source:
   sha256: 8c611834f51e7c6de934789eed2d194d982c9b6c46954afbfdc3996d3830c6d0
 
 build:
-  number: 1
+  number: 2
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
   host:
     - pip
     - python
@@ -45,7 +45,7 @@ tests:
         - py_tools_ds.io
         - py_tools_ds.geo
         - py_tools_ds.geo.raster.reproject
-      pip_check: True
+      pip_check: true
 
 about:
   summary: A collection of Python tools by Daniel Scheffler.
