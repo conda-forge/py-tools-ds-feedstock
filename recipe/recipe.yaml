@@ -25,9 +25,9 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
   host:
+    - hatchling
     - pip
     - python
-    - setuptools
   run:
     - gdal >=3.8
     - numpy
